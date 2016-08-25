@@ -5,30 +5,26 @@ function getScramble() {
         let response = JSON.parse(request.responseText);
         let word = response.scrambled;
         console.log(word);
-        let letters = word.split('');
-        letters.push = letter;
-
-    })
-
-//define the parent
-    let parent = document.querySelector('#version');
-    let template = document.querySelector('#scramble-template').innerHTML;
-    let scrambles = [];
-
-    scrambles.push({
+            
+let parent = document.querySelector('#version');
+        let template = document.querySelector('#scramble-template').innerHTML;
+        let scrambles = [];
+         scrambles.letter = word.split('');
+        
+        scrambles.push({
         title: 'UnsCRAMble IT',
         letter: [],
         correct: "you got it bucko",
         incorrect: "Wrong, sporto",
         });
 
-for (let i = 0; i < scrambles.length; i++){
+
     let section = document.createElement('section');
-   section.innerHTML = Mustache.render(template, scrambles[i]);
+   section.innerHTML = Mustache.render(template, scrambles);
    parent.appendChild(section);
-    } 
+    })
+
      request.send();
-     console.log(scrambles);
 
 }
 
