@@ -8,7 +8,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
         <script id="scramble-template" type="x-mustache-template">
             <h2>{{title}}</h2>
-            <p class='letter'>{{letter}}</p>
+                {{#letter}}
+                    <p class='letter'>{{ . }}</p>
+                {{/letter}}
             <input type="text" placeholder="your answer here"></input>
             <button id="submit">SUBMIT!</button>
             <button id='right' value='true'>{{correct}}</button>

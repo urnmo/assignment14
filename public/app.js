@@ -30,7 +30,17 @@ let parent = document.querySelector('#version');
 
 
 
+
 window.addEventListener('load', function () {
     getScramble();
-})
+    
+    let submitBtn = document.querySelector('#submit');
+    submitBtn.addEventListener('click', function(){
+        let request = new XMLHttpRequest();
+        request.open("POST", "https://harold-ejcpxaenph.now.sh/scrambled");
+        let input = document.querySelector('#userGuess').value;
+       
+        
+});
+});
 
